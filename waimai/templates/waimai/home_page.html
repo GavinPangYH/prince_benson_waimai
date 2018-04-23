@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Prince Benson Waimai</title>
+</head>
+<body>
+ <!-- Site Header -->
+ <h1>Prince Benson Fusion Restaurant</h1>
+
+<!-- Blog Post -->
+ <h2>Tasty Treats To Your Door</h2>
+ <p>No.1 Tasty Pizza!</p>
+ <p><img src="http://r.photo.store.qq.com/psb?/V11qtBa523MrFv/fwWoldDNo6MJ1V3vUEUaDblQ0fkn7uL7cFhNgd.0ezI!/r/dEABAAAAAAAA"></p>
+ <p>No.2 Huge burger!</p>
+ <p><img src="http://r.photo.store.qq.com/psb?/V11qtBa523MrFv/frkol5xEeUTPG0Oqo.qPPkK3Z8rf0Zvtd8Bq4mCc3iM!/r/dGcBAAAAAAAA"></p>
+ <p>No.3 Healthy Salad!</p>
+ <p><img src=" http://r.photo.store.qq.com/psb?/V11qtBa523MrFv/TCr..VPIn6ZWymsOz9HTyyj2YmoV*Jnz5Trq.F31gFA!/r/dEIBAAAAAAAA
+"></p>
+
+<!-- Like And Comment -->
+ <button>Tasty</button>
+ <h2>Order Some Food: </h2>
+ <form action="{% url 'waimai:home_page' %}" method="POST">
+ {% csrf_token %}
+ <textarea name="address" placeholder="Please Enter Your Address"></textarea><br>
+ <input type="text" placeholder="Please Enter Your Order" name="order"><br><br>
+ <input type="submit" value="Order Now!">
+ </form>
+
+<h2>Orders: </h2>
+ Address {{address}} Orders: {{order}}
+</body>
+</html>
